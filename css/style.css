@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.box {
+    height: 100vh;
+    width: 100%;
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    position: relative;
+    height: 600px;
+    width: 400px;
+    border-radius: 2rem;
+    background-color: #232322;
+    overflow: hidden;
+}
+
+.container > span {
+    position: absolute;
+    left: -9%;
+    top: 45%;
+    color: #FFF;
+    font-size: 12rem;
+    font-weight: 900;
+    opacity: .05;
+    font-style: italic;
+    z-index: 1;
+}
+
+.circle {
+    position: absolute;
+    right:-25%;
+    top: -10%;
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+    background-color: #9ada2a;
+    transition: .5s;
+    z-index: 2;
+}
+
+.container:hover .circle {
+    height: 500px;
+    width: 700px;
+    top: -40%;
+    right: -60%;
+}
+
+.img {
+    position: absolute;
+    height: 350px;
+    width: 350px;
+    top: 14%;
+    left: 50%;
+    transform: translateX(-50%) rotate(-25deg);
+    transition: .5s;
+    z-index: 3;
+}
+
+.img img {
+    height: 100%;
+    width: 100%;
+}
+
+.container:hover .img{
+    top: -1%;
+}
+
+.title {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #FFF;
+    font-size: 1.3rem;
+    z-index: 3;
+    transition: .5s;
+}
+
+.container:hover .title {
+    top: 55%
+}
+
+.content {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    width: 80%;
+    transform: translateX(-50%);
+    color: #FFF;
+    text-align: center;
+    z-index: 10;
+    transition: .5s;
+}
+
+.container:hover .content {
+    top: 60%;
+}
+
+.size,
+.color,
+button {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(3rem);
+}
+
+.size {
+    transition: .5s;
+}
+
+.container:hover .size {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.size > span,
+.color > span {
+    cursor: pointer;
+}
+
+.size > span:first-of-type,
+.color > span:first-of-type{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: .98rem;
+    margin-right: 1rem
+}
+
+.size .number {
+    background-color: #FFF;
+    color: #000;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.number,
+.color_name{
+    margin-top: 1rem;
+}
+
+.color {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    transition: .6s;
+}
+
+.container:hover .color {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.color_name {
+    height: 20px;
+    width: 20px;
+    margin: 0 .1rem;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.color span:nth-of-type(2){
+    background-color: #a0db2e;
+}
+
+.color span:nth-of-type(3){
+    background-color: #05a9f5;
+}
+
+.color span:nth-of-type(4){
+    background-color: #ea1f62;
+}
+
+.content button {
+    height: 3rem;
+    width: 7rem;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    font-weight: bold;
+    border-radius: .5rem;
+    border: none;
+    background-color: #FFF;
+    transition: .7s;
+    cursor: pointer;
+}
+
+.container:hover .content button {
+    transform: translateY(0);
+    opacity: 1;
+}
